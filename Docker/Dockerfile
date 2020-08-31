@@ -22,7 +22,7 @@ RUN apt-get update
 RUN apt-get install gcc gfortran software-properties-common
 
 #Installing python packages
-RUN conda install --quiet --yes
+RUN conda install --quiet --yes \
 'fabric' 'psycopg2'
 
 USER $NB_UID
