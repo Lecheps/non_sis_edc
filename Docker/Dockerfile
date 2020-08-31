@@ -17,9 +17,12 @@ RUN conda clean --all -f -y && \
 fix-permissions $CONDA_DIR && \
 fix-permissions /home/$NB_USER
 
-
 #Installing debian packages
 RUN apt-get update
 RUN apt-get install gcc gfortran software-properties-common
+
+#Installing python packages
+RUN conda install --quiet --yes
+'fabric' 'psycopg2'
 
 USER $NB_UID
