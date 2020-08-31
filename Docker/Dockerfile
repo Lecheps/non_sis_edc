@@ -1,4 +1,4 @@
-ARG BASE_CONTAINER=jupyter/datascience-notebook:41d6b29cd15c
+ARG BASE_CONTAINER=jupyter/datascience-notebook:r-3.6.3
 FROM $BASE_CONTAINER
 
 LABEL maintainer="José-Luis Guerrero <jlg@niva.com>"
